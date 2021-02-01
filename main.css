@@ -1,3 +1,27 @@
 .header-right {
     min-width: 15vw;
 }
+
+.profile img {
+    border-radius: 50%;
+    border: 1px solid #eee;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.profile img:hover {
+    background: #eee;
+    padding: 2px;
+    transition: 0.25s ease
+}
+
+.progress-bar:hover {
+    background: blueviolet;
+    transition: 0.2s ease;
+}
+
+@media (max-width: 48em) {
+    .non-mobile {
+        display: none;
+    }
+}
