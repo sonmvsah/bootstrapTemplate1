@@ -20,6 +20,42 @@
     transition: 0.2s ease;
 }
 
+.main {
+    display: grid;
+    margin-top: 76px;
+    height: 100vh;
+    background: #eee;
+}
+
+.flip-card {
+    /* perspective: 1000px; */
+}
+
+.flip-card .card-back {
+    transform: rotateX(180deg);
+    z-index: -1;
+    position: absolute;
+}
+
+.flip-card .card-body {
+    transform: rotateX(180deg);
+}
+
+.flip-card:hover {
+    transform: rotateX(-180deg);
+    transition: 0.25s ease;
+}
+
+.flip-card:hover .card-img-top {
+    transform: rotateX(-180deg);
+    transition: 0.25s ease;
+}
+
+.flip-card:hover .card-body {
+    transform: rotateX(-90deg);
+    transition: 0.25s ease;
+}
+
 @media (max-width: 48em) {
     .non-mobile {
         display: none;
