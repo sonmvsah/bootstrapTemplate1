@@ -21,44 +21,45 @@
 }
 
 .main {
-    display: grid;
+    /* display: grid; */
     margin-top: 76px;
     height: 100vh;
     background: #eee;
 }
 
-.flip-card {
-    /* perspective: 1000px; */
+.card-flip>div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    display: flex;
 }
 
-.flip-card .card-back {
-    transform: rotateX(180deg);
-    z-index: -1;
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
     position: absolute;
+    top: 0;
+    height: 250px;
 }
 
-.flip-card .card-body {
-    transform: rotateX(180deg);
+.card-flip:hover .card-front {
+    transform: rotateY(-180deg);
 }
 
-.flip-card:hover {
-    transform: rotateX(-180deg);
-    transition: 0.25s ease;
-}
-
-.flip-card:hover .card-img-top {
-    transform: rotateX(-180deg);
-    transition: 0.25s ease;
-}
-
-.flip-card:hover .card-body {
-    transform: rotateX(-90deg);
-    transition: 0.25s ease;
+.card-flip:hover .card-back {
+    transform: rotateY(0deg);
 }
 
 .reading-box {
     position: relative;
     top: 76px;
+    padding: 0px;
 }
 
 .box-lid-menu {
@@ -68,5 +69,27 @@
 @media (max-width: 48em) {
     .non-mobile {
         display: none;
+    }
+    .box-lid-open .reading-box {
+        padding: 0px;
+    }
+    /* .box-lid-open .box-lid-menu nav {
+        left: 40px !important;
+        top: 40px;
+    } */
+    .reading-box {
+        padding: 40px 0px 20px 40px;
+    }
+    .card-flip>div {
+        height: 150px;
+    }
+    .card-back {
+        height: 150px;
+    }
+    .card-front,
+    .item-col {
+        box-shadow: 1px 1px 1px #00000082;
+        padding: 10px;
+        height: 25vh;
     }
 }
