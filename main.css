@@ -56,6 +56,15 @@
     transition: 0.25s ease;
 }
 
+.reading-box {
+    position: relative;
+    top: 76px;
+}
+
+.box-lid-menu {
+    top: 76px !important;
+}
+
 @media (max-width: 48em) {
     .non-mobile {
         display: none;

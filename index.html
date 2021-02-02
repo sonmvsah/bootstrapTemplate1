@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./bower_components/font-awesome/css/fontawesome.css">
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./bower_components/box-lid/css/box-lid.css">
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/box-lid/js/jquery.box-lid.min.js"></script>
     <script src="index.js"></script>
 </head>
 
@@ -24,16 +26,19 @@
         <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang chủ<span class="sr-only">(current)</span></a>
+                    <a class="nav-link disabled" href="/">Trang chủ<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Giới thiệu</a>
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="false">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/post.html" tabindex="-1" aria-disabled="false">Template post</a>
                 </li>
                 <li class="nav-item dropdown" data-toggle="dropdown">
                     <a href="#" class="nav-link dropdown-toggle">Dịch vụ</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item active" href="#">Text</a>
-                        <a class="dropdown-item " href="#">Thiết kế website</a>
+                        <a class="dropdown-item active" href="/post.html">Post template</a>
+                        <a class="dropdown-item " href="/post.html">Thiết kế website</a>
                         <a class="dropdown-item " href="#">Thiết kế nhận diện thương hiệu</a>
                         <a class="dropdown-item " href="#">Thiết kế app mobile</a>
 
@@ -105,6 +110,12 @@
             </div>
 
         </div>
+
+
+
+
+
+
 
     </div>
 
